@@ -1,0 +1,6 @@
+language: python
+python: 
+  - "3.7"
+  - "3.8"
+  - "nightly"
+script: python -m pytest .
