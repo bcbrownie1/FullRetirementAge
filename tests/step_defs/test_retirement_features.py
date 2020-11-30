@@ -2,6 +2,7 @@
 """SSA Retirement Calculator feature tests."""
 
 import pytest
+from ssa import SSA
 from pytest_bdd import (
     parsers,
     given,
@@ -9,9 +10,6 @@ from pytest_bdd import (
     then,
     when,
 )
-
-from ssa import SSA
-from functools import partial
 
 CONVERTERS = {
     'birthyear' : int,
@@ -45,8 +43,8 @@ def my_retirement_age_will_be_retirementageyear_years_and_retirementagemonth_mon
     assert calculator.retirement_age_year == retirementageyear and calculator.retirement_age_month == retirementagemonth
 
 
-@then('my retirement date will be in the month "<retirementyear>" of year "<retirementmonth>"')
-def my_retirement_date_will_be_in_the_month_retirementyear_of_year_retirementmonth(calculator, retirementyear, retirementmonth):
+@then('my retirement date will be in the month "<retirementmonth>" of year "<retirementyear>"')
+def my_retirement_date_will_be_in_the_month_retirementyear_of_year_retirementmonth(calculator, retirementmonth, retirementyear):
     assert calculator.retirement_year == retirementyear and calculator.retirement_month == retirementmonth
 
 

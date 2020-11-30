@@ -28,7 +28,7 @@ Feature: SSA Retirement Calculator
         Given a birthyear "<birthyear>" and birthmonth "<birthmonth>" are entered
         When the retirement age is calculated
         And the retirement date is calculated
-        Then my retirement date will be in the month "<retirementyear>" of year "<retirementmonth>"
+        Then my retirement date will be in the month "<retirementmonth>" of year "<retirementyear>"
 
         Examples:
         | birthyear | birthmonth | retirementyear | retirementmonth |
